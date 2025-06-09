@@ -35,7 +35,7 @@ echo -e "\033[33m===== Day  4 =====\033[0m"
 src="day4/*"
 out_exe="day4"
 out="-o ${out_fd}/${out_exe}"
-gcc $out $src $header
+gcc $out $src $header -lmd
 
 echo -e "\033[33m===== Day  5 =====\033[0m"
 src="day5/*"
