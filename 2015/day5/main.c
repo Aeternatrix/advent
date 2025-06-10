@@ -123,7 +123,7 @@ int part_two() {
         c = input[itr]; // Read
 
         word.duplicates += (word.last_char == c);
-        word.bad += word.bad ? 0 : seek_pair(itr); // if a pair has been found, no need to keep seeking
+        word.bad += word.bad || c == '\0' ? 0 : seek_pair(itr); // if a pair has been found, no need to keep seeking
 
         if(c == '\n' || c == '\0') {
             nice += ((word.duplicates >= 1) && (word.bad >= 1));
