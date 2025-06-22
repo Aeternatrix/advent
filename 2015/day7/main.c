@@ -51,10 +51,6 @@ read_instructions() {
     int itr = 0;
     int v = 0;
     do {
-        if (v > 2) { 
-            printf("ERROR");
-            return;
-        }
         c = input[itr++];
         if (c <= 'Z' && c >= 'A') {
             if (c == 'A') o = AND;
