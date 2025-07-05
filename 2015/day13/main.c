@@ -68,6 +68,12 @@ int part_one(int sz) {
     return -ts(1, 0, solution, sz);
 }
 
+/*In all the commotion, you realize that you forgot to seat yourself. At this point, you're pretty apathetic toward the whole thing, and your happiness wouldn't really go up or down regardless of who you sit next to. You assume everyone else would be just as ambivalent about sitting next to you, too.
+ * 
+ * So, add yourself to the list, and give all happiness relationships that involve you a score of 0.
+ * 
+ * What is the total change in happiness for the optimal seating arrangement that actually includes yourself?
+ */
 int part_two(int sz) {
     int solution[LOCS*LOCS] = {};
     for (int i=0;i<LOCS*LOCS;i++) solution[i] = -1;
