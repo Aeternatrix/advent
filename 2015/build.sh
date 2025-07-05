@@ -88,7 +88,7 @@ echo -e "\033[33m===== Day 13 =====\033[0m"
 src="day13/*"
 out_exe="day13"
 out="-o ${out_fd}/${out_exe}"
-gcc $out $src $header -ggdb
+gcc $out $src $header
 
 echo -e "\033[33m===== Day 14 =====\033[0m"
 src="day14/*"
