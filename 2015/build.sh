@@ -67,8 +67,6 @@ out_exe="day9"
 out="-o ${out_fd}/${out_exe}"
 gcc $out $src $header
 
-echo -e "\033[33m===== Day 10 =====\033[0m"
-src="day10/*"
 out_exe="day10"
 out="-o ${out_fd}/${out_exe}"
 gcc $out $src $header
@@ -80,7 +78,7 @@ out="-o ${out_fd}/${out_exe}"
 gcc $out $src $header
 
 echo -e "\033[33m===== Day 12 =====\033[0m"
-src="day12/*"
+src="day12/main.c"
 out_exe="day12"
 out="-o ${out_fd}/${out_exe}"
 gcc $out $src $header
