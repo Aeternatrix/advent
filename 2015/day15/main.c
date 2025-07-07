@@ -20,6 +20,9 @@ ingredient Butterscotch = { 0,  5, -3,  0, 3 };
 ingredient Chocolate    = { 0,  0,  5, -1, 8 };
 ingredient Candy        = { 0, -1,  0,  5, 8 };
 
+
+int calc_score(int a, int b, int c, int d);
+int max(int a, int b) { return a < b ? b : a; }
 /*
  * Today, you set out on the task of perfecting your milk-dunking cookie recipe. All you have to do is find the right balance of ingredients.
  * 
@@ -46,15 +49,6 @@ ingredient Candy        = { 0, -1,  0,  5, 8 };
  * 
  * Given the ingredients in your kitchen and their properties, what is the total score of the highest-scoring cookie you can make?
  */
-int max(int a, int b) { return a < b ? b : a; }
-int calc_score(int a, int b, int c, int d) {
-    int cap = max(0, a * Sprinkles.capacity + b * Butterscotch.capacity + c * Chocolate.capacity + d * Candy.capacity);
-    int dur = max(0, a * Sprinkles.durability + b * Butterscotch.durability + c * Chocolate.durability + d * Candy.durability);
-    int fla = max(0, a * Sprinkles.flavour + b * Butterscotch.flavour + c * Chocolate.flavour + d * Candy.flavour);
-    int tex = max(0, a * Sprinkles.texture + b * Butterscotch.texture + c * Chocolate.texture + d * Candy.texture);
-    return cap * dur * fla * tex;
-}
-
 int part_one() {
     int maximum = 0;
     for (int a = 0; a <= 100; a++) {
@@ -96,4 +90,12 @@ int part_two() {
 int main() {
     printf("The highest scoring cookie has a score of %d.\n", part_one());
     printf("The highest scoring cookie, with 500 calories, has a score of %d.\n", part_two());
+}
+
+int calc_score(int a, int b, int c, int d) {
+    int cap = max(0, a * Sprinkles.capacity + b * Butterscotch.capacity + c * Chocolate.capacity + d * Candy.capacity);
+    int dur = max(0, a * Sprinkles.durability + b * Butterscotch.durability + c * Chocolate.durability + d * Candy.durability);
+    int fla = max(0, a * Sprinkles.flavour + b * Butterscotch.flavour + c * Chocolate.flavour + d * Candy.flavour);
+    int tex = max(0, a * Sprinkles.texture + b * Butterscotch.texture + c * Chocolate.texture + d * Candy.texture);
+    return cap * dur * fla * tex;
 }
