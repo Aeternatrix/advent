@@ -35,13 +35,13 @@ echo -e "\033[33m===== Day  4 =====\033[0m"
 src="day4/main.c"
 out_exe="day4"
 out="-o ${out_fd}/${out_exe}"
-gcc $out $src $header -lmd
+gcc $out $src $header
 
 echo -e "\033[33m===== Day  5 =====\033[0m"
 src="day5/main.c"
 out_exe="day5"
 out="-o ${out_fd}/${out_exe}"
-gcc $out $src $header
+gcc $out $src $header -lmd
 
 echo -e "\033[33m===== Day  6 =====\033[0m"
 src="day6/main.c"
