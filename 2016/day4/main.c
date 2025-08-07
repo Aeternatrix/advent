@@ -9,12 +9,6 @@
 #include <stdio.h>
 
 #include "day4_input.h"
-//	const char day4_input[] = {
-//	    "aaaaa-bbb-z-y-x-123[abxyz]\n"
-//	    "a-b-c-d-e-f-g-h-987[abcde]\n"
-//	    "not-a-real-room-404[oarel]\n"
-//	    "totally-real-room-200[decoy]"
-//	};
 
 #define PAGE 4096
 #define ALPHA 26
