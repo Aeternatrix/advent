@@ -68,6 +68,7 @@ out="-o ${out_fd}/${out_exe}"
 gcc $out $src $header
 
 echo -e "\033[33m===== Day 10 =====\033[0m"
+src="day10/main.c"
 out_exe="day10"
 out="-o ${out_fd}/${out_exe}"
 gcc $out $src $header
